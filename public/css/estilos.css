@@ -1,0 +1,29 @@
+/* Generales */
+.slides {
+    
+}
+
+
+/* Especificas */
+.slide1 {
+    color: #cccccc;
+}
+.slide1 h1 {
+    font-size: 70px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.slide1 h2 {
+    font-size: 35px;
+    color: #dddddd;
+    margin-bottom: 45%;
+}
+.slide1 h3 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.slide1 p {
+    font-size: 18px;
+    color: #cccccc;
+}
