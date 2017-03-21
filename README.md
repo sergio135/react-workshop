@@ -1,5 +1,5 @@
 # React Workshop
-Presentacion introductoria para el workshop de React
+Presentacion introductoria para el workshop de React<br>
 [Minsait by Indra](https://www.minsait.com/es)
 
 ## Intrucciones para el Run
