@@ -1,10 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# React Workshop
+Presentacion introductoria para el workshop de React
+[Minsait by Indra](https://www.minsait.com/es)
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-## Table of Contents
-
-- [Updating to New Releases](#updating-to-new-releases)
-
-## Updating to New Releases
+## Intrucciones para el Run
+1. `npm i`: instalar dependencias
+2. `npm start`: Lanzar la presentacion en un navegador
+3. `npm run test`: Lanzar los test unitarios
