@@ -18,6 +18,16 @@
    font-size: 35px; 
 }.reveal p {
    font-size: 30px; 
+   background: none;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.row .div {
+    width: 33%;
 }
 
 .perfil {
@@ -60,28 +70,49 @@
 
 
 
-/* Especificas */
-.slide1 {
+/* Welcome */
+#welcome {
     color: #cccccc;
 }
-.slide1 h1 {
+#welcome h1 {
     font-size: 70px;
     color: #ffffff;
     margin-bottom: 10px;
 }
-.slide1 h2 {
+#welcome h2 {
     font-size: 35px;
     color: #dddddd;
     margin-bottom: 45%;
 }
-.slide1 h3 {
+#welcome h3 {
     font-size: 30px;
     color: #ffffff;
     margin-bottom: 10px;
 }
-.slide1 p {
+#welcome p {
     font-size: 18px;
     color: #cccccc;
+}
+
+
+
+/* Que es react */
+#que-es-react p {
+   
+}
+#que-es-react .change {
+   transition: 0.5s;
+}
+#que-es-react .rojo {
+   color: red;
+}
+#que-es-react img {
+   margin: 0;
+}
+#que-es-react pre {
+    margin: 0;
+    top: -20px;
+    width: 100%;
 }
 
 

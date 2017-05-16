@@ -3,13 +3,13 @@
   <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">	
 	<title>Workshop React, Webpack, ES6</title>
 </head>
 <body>
 	<div class="perfil">
 		<img src="%PUBLIC_URL%/img/perfil1.jpg">
-		<p>Sergio Garcia - @sergio135</p>
+		<p>Sergio Garcia</p>
 	</div>
 	<div class="minsait">
 		<img src="%PUBLIC_URL%/img/minsait.jpg">
@@ -17,12 +17,11 @@
 	<div id="root"></div>
 	<div class="reveal">
 		<div class="slides">
-			<section class="slide1" data-background-image="http://blog.workshape.io/content/images/2015/10/cover.png">
+			<section id="welcome" data-background-image="http://blog.workshape.io/content/images/2015/10/cover.png">
 				<h1>Bienvenidos al React WorkShop</h1>
 				<h2>Utiliza el poder de Facebook en tus desarrollos</h2>
-				<h3 class="fragment grow">Webpack - ES6 - Redux - JSX</h3>
+				<h3 class="fragment grow">React - Router - Redux</h3>
 				<p>by Minsait Worshop</p>
-				
 			</section>
 			<!--##### Introduccion #####-->
 			<section id="que-es-react">
@@ -30,28 +29,76 @@
 					<h1>¿Que es React?</h1>
 					<h4 class="fragment fade-up">es una libreria construida por facebook</h4>
 					<p class="fragment fade-up">- Enfocada en la visualización</p>
-					<p class="fragment fade-up">- Crear interfaces de usuario</p>
-					<p class="fragment fade-up">- Basada en componentes</p>
-					<p class="fragment fade-up">- Alto rendimiento</p>
-					<p class="fragment fade-up">- Reactiva</p>
-					<aside>
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<p class="fragment fade-up">- Compatibilidad con otras librerias</p>
+					<p class="fragment fade-up">- Escalable, Específica y Reutilizable</p>
+					<p class="fragment fade-up">- Basada en Componentes</p>
+					<p class="fragment fade-up">- Altamente Reactiva</p>
+					<p class="fragment fade-up">- Orientación UI/UX</p>
+					<p class="fragment fade-up">- Bajo peso, Alto rendimiento</p>
 				</section>
 				<section>
-					<h1>filosofia disruptiva</h1>
-					<p>El problema de los ingenieros de Facebook</p>
+					<h1>El problema</h1>
+					<p>La casuistica de los ingenieros de Facebook</p>
+					<div class="row">
+						<div class="fragment fade-up div">
+							<h5>Flujo continuo</h5>
+							<img src="%PUBLIC_URL%/img/que-es-react/tuberiarota.jpg">
+						</div>
+						<div class="fragment fade-up div">
+							<h5>Reactivo</h5>
+							<img src="%PUBLIC_URL%/img/que-es-react/reactivo.jpg">						
+						</div>
+						<div class="fragment fade-up div">
+							<h5>Sencillo y rapido</h5>
+							<img src="%PUBLIC_URL%/img/que-es-react/calculos.png">							
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Filosofia disruptiva</h1>
 					<p>Una libreria que rompe con la actual forma de trabajar con DOM</p>
-					<h3 class="fragment fade-up">- DOM Virtual</p>
-					<h3 class="fragment fade-up">- JSX</h3>
+					<div class="fragment fade-up row">
+						<div class="div">
+							<h5>DOM Virtual</h5>
+							<div class="fragment fade-up">
+								<p>Olvidate de los accesos al DOM y optimiza el rendimiento</p>
+								<div id="ejemplo-input-binding">
+								</div>
+							</div>
+						</div>
+						<div class="div">
+							<h5>JSX</h5>
+							<div class="fragment fade-up">
+								<p class="">Usa el poder de Javascript en el HTML y olvidate de los superpoderes</p>
+								<pre>
+<code class="javascript" data-trim>function Render() {
+  &lt;div&gt;
+  for(var i=0;i<10;i++) {
+    &lt;p&gt;Hola Holita&lt;/p&gt;
+  }
+  &lt;/div&gt;
+}</code>
+								</pre>
+							</div>
+						</div>
+						<div class="div">
+							<h5>Reactivo</h5>
+							<div class="fragment fade-up">
+								<p>Un paradigma 100% funcional, que reaciona a eventos</p>
+								<img src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+							</div>
+						</div>
+					</div>
 				</section>
 				<section>
 					<h1>Finalidad recomendada</h1>
-					<div></div>
 					<p>- Aplicaciones extremadamente cambiantes</p>
-					<p>- Aplicaciones Modulares</p>
-					<p>- Con muchas peticiones AJAX</p>
-					<p>- Aplicaciones en Real Time</span></p>
+					<p>- Interfaces de usuario</p>
+					<p>- Aplicaciones en Real Time</p>
+					<p>- Pequeños modulos funcionales</p>
+					<p>- Integracion con otras librerias</p>
+					<p>- Aplicaciones rapidas de bajo peso</p>
+					<p>- App's nativas para movil</p>
 				</section>
 			</section>
 			
@@ -229,6 +276,26 @@
 					<h1>¿Que es Flux?</h1>
 				</section>
 			</section>
+
+			<section id="Router" data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
+				<section>
+					<h1>React Router</h1>
+					<p>La verdadera M del MVC</p>
+				</section>
+				<section>
+					<h1>¿Que es Flux?</h1>
+				</section>
+			</section>
+
+			<section id="Jest" data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
+				<section>
+					<h1>React Router</h1>
+					<p>La verdadera M del MVC</p>
+				</section>
+				<section>
+					<h1>¿Que es Flux?</h1>
+				</section>
+			</section>
 			<!--##### React Extras #####-->
 
 			<!--##### React vs Angular2 #####-->
@@ -295,12 +362,8 @@
 		</div>
 	</div>
 
-
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 	<script src="%PUBLIC_URL%/js/reveal.js"></script>
-	<script>
-		Reveal.initialize({
-			history: true,
-		});
-	</script>
+	<script src="%PUBLIC_URL%/js/front.js"></script>
   </body>
 </html>
