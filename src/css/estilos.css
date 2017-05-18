@@ -132,6 +132,10 @@
 #JSX .organizacion .row div {
     flex-grow: 1;
 }
+#JSX img {
+    width: 100%;
+}
+
 
 /* Ecosistema React */
 #ecosistema-react .logos {
@@ -153,3 +157,5 @@
     left: 0;
     width: 90%;
 }
+
+

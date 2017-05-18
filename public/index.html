@@ -256,13 +256,27 @@
 					</div>
 				</section>
 				<section>
-					<h1>Reactivos</h1>
+					<h1>Tipos de componentes</h1>
 					<div class="row">
 						<div>
-							<h4>Stateful Component</h4>
+							<h4>Stateless Component</h4>
+							<div class="fragment fade-up">
+								<p>Solo poseen la V</p>
+								<p>Son mas rapidos y lijeros</p>
+								<p>Son componentes funcionales</p>
+								<p>No poseen ni constructor ni estado</p>
+								<p>Devuelven un elemento HTML</p>
+							</div>
 						</div>
 						<div>
-							<h4>Stateless Component</h4>
+							<h4>Stateful Component</h4>
+							<div class="fragment fade-up">
+								<p>Disponen de una funcionalidad VC</p>
+								<p>Son componentes de objeto</p>
+								<p>Describen una logica y estado</p>
+								<p>Son mutables y reactivos</p>
+								<p>Devuelven un componente completo</p>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -308,12 +322,12 @@
 					<h1>Pero... ¿que es JSX?</h1>
 					<p class="fragment fade-up">Sirve para la construccion del sistema de plantillas</p>
 					<p class="fragment fade-up">JSX no es HTML, es un seudo-leguaje que extiende Javascript</p>
-					<img class="fragment current-visible" alt="Cara extrañado" src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<img class="fragment current-visible" alt="Cara extrañado" src="%PUBLIC_URL%/img/jsx/tenor.gif">
 					<p class="fragment fade-up">Por lo tanto, tiene toda la potencia de JS</p>
 					<p class="fragment fade-up">Su sintaxsis es muy parecida al HTML</p>
-					<img class="fragment current-visible" alt="What??" src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<img class="fragment current-visible" alt="What??" src="%PUBLIC_URL%/img/jsx/tenor2.gif">
 					<span class="fragment fade-up"></span>
-					<img class="fragment current-visible" alt="SI! aplausos..." src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<img class="fragment current-visible" alt="SI! aplausos..." src="%PUBLIC_URL%/img/jsx/yes.gif">
 					<h5 class="fragment fade-up">¿Que genera JSX?</h5>
 					<p class="fragment fade-up">JSX Compila en Elementos del DOM virtual</p>
 				</section>
@@ -337,11 +351,11 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 							<div class="row">
 								<div class="fragment fade-up">
 									<p>Funcionalidad</p>
-									<img src="#">
+									<img src="%PUBLIC_URL%/img/jsx/funcional.png">
 								</div>
 								<div class="fragment fade-up">
 									<p>Tipologia</p>
-									<img src="#">
+									<img src="%PUBLIC_URL%/img/jsx/tipologia.png">
 								</div>
 							</div>
 						</div>
@@ -350,11 +364,11 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 							<div class="row">
 								<div class="fragment fade-up">
 									<p>Funcionalidad</p>
-									<img src="#">
+									<img src="%PUBLIC_URL%/img/jsx/funcional-jsx.png">
 								</div>
 								<div class="fragment fade-up">
 									<p>Unificada</p>
-									<img src="#">
+									<img src="%PUBLIC_URL%/img/jsx/unificada.png">
 								</div>																
 							</div>
 						</div>
@@ -369,7 +383,11 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 				</section>
 				<section>
 					<h1>Debbuger en tiempo de compilacion</h1>
-					<p>Para js y templates</p>
+					<p class="fragment fade-up">El propio react-cli y webpack analizan el codigo</p>
+					<p class="fragment fade-up">Se debugea tanto el js como los templates y CSS</p>
+					<p class="fragment fade-up">Usa linters para el mostrado de errores</p>
+					<p class="fragment fade-up">Bloquea la aplicacion y muestra el error en pantalla</p>
+					<p class="fragment fade-up">En el caso de los warning solo muestra el error</p>
 				</section>
 			</section>
 			<!--##### /Funcional #####-->
@@ -394,6 +412,17 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 				</section>
 				<section>
 					<h1>¿Como funciona?</h1>
+					<p>Se encarga de simular la navegacion web</p>
+					<p>Esta desarrollada para React pero es externa</p>
+					<p>Permite navegacion web y movil nativo</p>
+					<p>Esta escrito en leguaje JSX</p>
+					<pre><code>&ltRouter>
+    &ltRoute path="/" component={Home}/>
+    &ltRoute path="/about" component={About}/>
+    &ltRoute path="/topics" component={Topics}>
+        &ltRoute path="/:34" component={List}/>
+    &lt/Route>
+&lt/Router></code></pre>
 				</section>
 			</section>
 			<section id="flux">
