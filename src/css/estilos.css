@@ -19,6 +19,13 @@
 }.reveal p {
    font-size: 30px; 
    background: none;
+}.reveal ul {
+   margin: 20px 0;
+}.reveal li {
+    text-align: left;
+   font-size: 30px; 
+   background: none;
+   margin-bottom: 10px;
 }
 .row {
     display: flex;
@@ -26,9 +33,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.row .div {
-    width: 33%;
-}
+
 
 .perfil {
     display: flex;
@@ -95,10 +100,9 @@
 }
 
 
-
 /* Que es react */
-#que-es-react p {
-   
+#que-es-react .row .div {
+    width: 33%;
 }
 #que-es-react .change {
    transition: 0.5s;
@@ -116,7 +120,7 @@
 }
 
 
-
+/* Ecosistema React */
 #ecosistema-react .logos {
     display: flex;
     flex-direction: row;
@@ -127,4 +131,12 @@
     width: 20%;
     height: 100%;
     margin: 5px 25px;
+}
+
+
+/* Ecosistema React */
+#virtual-dom .row .float {
+    position: absolute;
+    left: 0;
+    width: 90%;
 }

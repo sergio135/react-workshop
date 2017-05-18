@@ -167,14 +167,55 @@
 					<p>El famoso Dom virtual que otros framework han implementado</p>
 				</section>
 				<section>
-					<h4>¿En que consiste?</h4>
+					<h1>¿En que consiste?</h1>
+					<p class="fragment fade-up">El virtual DOM es la generacion exacta del actual DOM <br>pero guardado en memoria</p>
+					<div class="row">
+						<div class="fragment fade-up div">
+							<img src="%PUBLIC_URL%/img/virtual-dom/virtualdom.png">
+						</div>
+						<div class="div">
+							<ul>
+								<li class="fragment fade-up">Es una copia exacta</li>	
+								<li class="fragment fade-up">Tiene elementos anidados</li>	
+								<li class="fragment fade-up">Dispone de sus propios eventos</li>	
+								<li class="fragment fade-up">Y demas propiedades <br>y metodos del DOM</li>
+							</ul>	
+						</div>	
+					</div>
 				</section>
 				<section>
-					<h4>Ventajas</h4>
-					<p>Una solcion excelente para la entrada nasiva de datos</p>
-					<p>Especialemente util con el flujo e tiempo real</p>
-					<p>Renderiza solo los datos nuevos entrantes, dejando los que no hna cambiado y optimizando el rendimiento</p>
-					<p>Olvidate del binding, timeout, etc...</p>
+					<h1>¿Como Funciona?</h1>
+					<p class="fragment fade-up" data-fragment-index="1">Nosotros solo trabajamos con el Virtual DOM</p>
+					<p class="fragment fade-up" data-fragment-index="2">Y cuando el virtual DOM cambia, Actualiza el DOM normal</p>
+					<div class="row">
+						<div style="width: 55%; position:relative;">
+							<img class="fragment current-visible float" data-fragment-index="3" src="%PUBLIC_URL%/img/virtual-dom/virtualwork1.png">
+							<img class="fragment current-visible float" data-fragment-index="5" src="%PUBLIC_URL%/img/virtual-dom/virtualwork2.png">
+							<img class="fragment current-visible float" data-fragment-index="6" src="%PUBLIC_URL%/img/virtual-dom/virtualwork2.png">
+							<img class="fragment current-visible float" data-fragment-index="7" src="%PUBLIC_URL%/img/virtual-dom/virtualwork3.png">
+						</div>
+						<div style="width: 45%;">
+							<ul>
+								<li class="fragment fade-up" data-fragment-index="3">Modelo, DOM Virtual y DOM</li>
+								<li class="fragment fade-up" data-fragment-index="4">El modelo actualiza el array, y los childs del DOM cambian</li>
+								<li class="fragment fade-up" data-fragment-index="5">El DOM Virtual compara los cambios con la version actual</li>
+								<li class="fragment fade-up" data-fragment-index="6">Se actualizan solo los elementos que han cambiado</li>
+								<li class="fragment fade-up" data-fragment-index="7">1 sola llamada al DOM añade el nuevo elemento sin modficar el resto</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section id="webpack" data-background-image="https://media.giphy.com/media/zIwIWQx12YNEI/giphy.gif">
+					
+				</section>
+				<section>
+					<h1>Ventajas</h1>
+					<p class="fragment fade-up">Solo actualizamos los datos que han cambiado</p>
+					<p class="fragment fade-up">Mejora de rendimiento</p>
+					<p class="fragment fade-up">Mejor usabilidad Web</p>
+					<p class="fragment fade-up">Se encarga de todo el manejo del DOM</p>
+					<p class="fragment fade-up">No mas watcher sobre el renderizado</p>
+					<p class="fragment fade-up">Mucho mas sencillo</p>
 				</section>
 			</section>
 
@@ -184,10 +225,42 @@
 					<p>Totalmente independientes, testeables, funcionales y escalables</p>
 				</section>
 				<section>
-					<h4>Abstraccion</h4>
+					<h1>Abstraccion</h1>
+					<p class="fragment fade-up">Los componentes son encapsulados en una clase dentro closure</p>
+					<h5 class="fragment fade-up">¿Que significa esto?</h5>
+					<div class="fragment fade-up">
+						<p>Cada componente tiene sus propias propiedades y metodos</p>
+						<p>No pueden ser pisadas por otros componentes</p>
+						<p>No estan accesibles desde la variable window ni la consola</p>
+						<p>Son compatibles con cualquier desarrollo</p>
+					</div>
 				</section>
 				<section>
-					<h4>reutiliables y escalable</h4>
+					<h1>reutilizables y escalable</h1>
+					<p>Reutiliza y expande tu codigo de forma sencilla</p>
+					<h5 class="fragment fade-up">HTML tag component</h5>
+					<div >
+						<p class="fragment fade-up">Nombra cada componente con un nuevo tag HTML</p>
+						<div class="fragment fade-up">
+							<p>Usalo en cualquier parte de tu codigo</p>
+							<pre><code class="html">< div> < CajaText/> < /div></code></pre>
+						</div>
+						<div class="fragment fade-up">
+							<p>Y arma tu propio Lego</p>
+							<img src="https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/videos/city/thumbnails/ap_minimovie_thumbnail.jpg?l.r2=524841091">
+						</div>
+					</div>
+				</section>
+				<section>
+					<h1>Reactivos</h1>
+					<div class="row">
+						<div>
+							<h4>Stateful Component</h4>
+						</div>
+						<div>
+							<h4>Stateless Component</h4>
+						</div>
+					</div>
 				</section>
 				<section>
 					<h4>Pruebas unitarias shallow</h4>
@@ -220,7 +293,8 @@
 
 			<section id="debuger">
 				<section>
-					<h1>Debbuger en tiempo de compilacion</h1>
+					<h1>React Debbuger</h1>
+					<p>Se produce  en tiempo de compilacion no ejucucion</p>
 					<p>Para js y templates</p>
 				</section>
 				<section>
