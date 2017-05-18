@@ -26,6 +26,10 @@
 			<!--##### Introduccion #####-->
 			<section id="que-es-react">
 				<section>
+					<h1>React</h1>
+					<p>Definicion, historia y caracteristicas</p>
+				</section>
+				<section>
 					<h1>¿Que es React?</h1>
 					<h4 class="fragment fade-up">es una libreria construida por facebook</h4>
 					<p class="fragment fade-up">- Enfocada en la visualización</p>
@@ -105,7 +109,7 @@
 			<!--##### /Introduccion #####-->
 
 			<!--##### Funcional #####-->
-			<section>
+			<section data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
 				<h1>Caracteristicas de React</h1>
 			</section>
 			
@@ -262,9 +266,7 @@
 						</div>
 					</div>
 				</section>
-				<section>
-					<h4>Pruebas unitarias shallow</h4>
-				</section>
+				
 			</section>
 
 			<section id="Isomorfico">
@@ -273,8 +275,27 @@
 					<p>Ejecuta en el cliente y servidor al mismo tiempo</p>
 				</section>
 				<section>
-					<h1>Interesante... pero que ventajas me da como desarrollador</h1>
-					<h3>cuentame mas!</h3>
+					<h1>El problema...</h1>
+					<p class="fragment fade-up">Carga inicial lenta</p>
+					<p class="fragment fade-up">Pesima optimizacion SEO</p>
+					<p class="fragment fade-up">No rastrable por crawlers</p>
+				</section>
+				<section>
+					<h1>¿Como funciona?</h1>
+					<p class="fragment fade-up">La logica JS se encuentra en el servidor</p>
+					<p class="fragment fade-up">En la primera llamada, el servidor devuelve la ruta solicitada con el JS embebido</p>
+					<p class="fragment fade-up">Las futuras cargas se producen por AJAX para traer la logica en asincronico</p>
+					<p class="fragment fade-up">Si volvemos a refrescar el navegador, el servidor vuelve a enviar la ruta con el JS embebido</p>
+					<h5 class="fragment fade-up">Requerimientos:</h5>
+					<p class="fragment fade-up">El servidor debe interpretar JS, por lo que node.js es requerido</p>
+				</section>
+				<section>
+					<h1>Server render / UX Client</h1>
+					<h5>Ventajas:</h5>
+					<p class="fragment fade-up">Una primera carga muy rapida</p>
+					<p class="fragment fade-up">Optimizacion SEO y Crawler friendly</p>
+					<p class="fragment fade-up">Se mantiene la usabilidad del frontend</p>
+					<p class="fragment fade-up">El resto de datos se carga de forma asincronica</p>
 				</section>
 			</section>
 
@@ -283,26 +304,72 @@
 					<h1>JSX</h1>
 					<p>El poder del JS en los templates</p>
 				</section>
+				<section class="img-flotante">
+					<h1>Pero... ¿que es JSX?</h1>
+					<p class="fragment fade-up">Sirve para la construccion del sistema de plantillas</p>
+					<p class="fragment fade-up">JSX no es HTML, es un seudo-leguaje que extiende Javascript</p>
+					<img class="fragment current-visible" alt="Cara extrañado" src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<p class="fragment fade-up">Por lo tanto, tiene toda la potencia de JS</p>
+					<p class="fragment fade-up">Su sintaxsis es muy parecida al HTML</p>
+					<img class="fragment current-visible" alt="What??" src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<span class="fragment fade-up"></span>
+					<img class="fragment current-visible" alt="SI! aplausos..." src="%PUBLIC_URL%/img/que-es-react/facebook-comments.jpg">
+					<h5 class="fragment fade-up">¿Que genera JSX?</h5>
+					<p class="fragment fade-up">JSX Compila en Elementos del DOM virtual</p>
+				</section>
 				<section>
-					<p>Potencia programador y despotencia maquetador</p>
-					<p>JS 6</p>
-					<p>Codigo 100% js</p>
-					<p>No al Jquery</p>
+					<h1>¿Como se usa?</h1>
+					<p class="fragment fade-up">Escribiendo etiquetas HTML dentro de un archivo js</p>
+					<pre class="fragment fade-up"><code class="jsx">var contenido = &ltdiv&gt &ltp&gtNombre:&lt/p&gt &lt/div&gt ;</code></pre>
+					<p class="fragment fade-up">Se puede incrustar cualquier expresion JS entre llaves</p>
+					<pre class="fragment fade-up"><code class="jsx">&ltdiv&gt {this.array.map( i => {
+return &ltp&gt {contenido} i.valor &lt/p&gt ;
+})} &lt/div&gt</code></pre>
+					<p class="fragment fade-up">Puedes añadir Componentes como si fueran custom elements</p>
+					<pre class="fragment fade-up"><code class="jsx">&ltdiv&gt &ltComponente/&gt &lt/div&gt</code></pre>
+					<p> <!-- Separacion para margenes --> </p>
+				</section>
+				<section class="organizacion">
+					<h1>Organización</h1>
+					<div class="row">
+						<div>
+							<h4>Others</h4>
+							<div class="row">
+								<div class="fragment fade-up">
+									<p>Funcionalidad</p>
+									<img src="#">
+								</div>
+								<div class="fragment fade-up">
+									<p>Tipologia</p>
+									<img src="#">
+								</div>
+							</div>
+						</div>
+						<div>
+							<h4>JSX</h4>
+							<div class="row">
+								<div class="fragment fade-up">
+									<p>Funcionalidad</p>
+									<img src="#">
+								</div>
+								<div class="fragment fade-up">
+									<p>Unificada</p>
+									<img src="#">
+								</div>																
+							</div>
+						</div>
+					</div>
 				</section>
 			</section>
 
 			<section id="debuger">
 				<section>
-					<h1>React Debbuger</h1>
-					<p>Se produce  en tiempo de compilacion no ejucucion</p>
+					<h1>Debbuger / Linter</h1>
 					<p>Para js y templates</p>
 				</section>
 				<section>
 					<h1>Debbuger en tiempo de compilacion</h1>
 					<p>Para js y templates</p>
-				</section>
-				<section>
-					<h1>EL unit testing de los inmutables</h1>
 				</section>
 			</section>
 			<!--##### /Funcional #####-->
@@ -320,28 +387,16 @@
 					<img src="%PUBLIC_URL%/img/ecosistema-react/ecmascript-6.jpg">
 				</div>
 			</section>
-
-			<section id="webpack" data-background-image="http://hd-wall-papers.com/images/wallpapers/navy-blue-wallpaper/navy-blue-wallpaper-19.jpg">
+			<section id="Router">
 				<section>
-					<h1>Webpack</h1>
-					<p>El bundle mas potente en la actualidad</p>
+					<h1>React Router</h1>
+					<p>El routing escrito en JSX</p>
 				</section>
 				<section>
-					<h1>¿Que es Webpack?</h1>
-				</section>
-			</section>
-
-			<section id="babel" data-background-image="http://hd-wall-papers.com/images/wallpapers/navy-blue-wallpaper/navy-blue-wallpaper-19.jpg">
-				<section>
-					<h1>Babel</h1>
-					<p>Usa hoy el javascript del mañana</p>
-				</section>
-				<section>
-					<h1></h1>
+					<h1>¿Como funciona?</h1>
 				</section>
 			</section>
-
-			<section id="flux" data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
+			<section id="flux">
 				<section>
 					<h1>Metodologia Flux</h1>
 					<p>La verdadera M del MVC</p>
@@ -349,53 +404,75 @@
 				<section>
 					<h1>¿Que es Flux?</h1>
 				</section>
-			</section>
-
-			<section id="Router" data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
 				<section>
-					<h1>React Router</h1>
-					<p>La verdadera M del MVC</p>
-				</section>
-				<section>
-					<h1>¿Que es Flux?</h1>
+					<h1>¿Que es Redux?</h1>
 				</section>
 			</section>
-
-			<section id="Jest" data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
+			<section id="webpack">
 				<section>
-					<h1>React Router</h1>
-					<p>La verdadera M del MVC</p>
+					<h1>Webpack</h1>
+					<p>El bundle mas potente de la actualidad</p>
 				</section>
 				<section>
-					<h1>¿Que es Flux?</h1>
+					<h1>¿Que es Webpack?</h1>
+				</section>
+			</section>
+			<section id="babel">
+				<section>
+					<h1>Babel</h1>
+					<p>Usa hoy el javascript del mañana</p>
+				</section>
+				<section>
+					<h1>¿Que es Babel?</h1>
+					<p></p>
+				</section>
+			</section>
+			<section id="Jest">
+				<section>
+					<h1>Jest</h1>
+					<p>Los UnitTest de los inmutables</p>
+				</section>
+				<section>
+					<h1>¿Que es Jest?</h1>
+					<p></p>
 				</section>
 			</section>
 			<!--##### React Extras #####-->
 
-			<!--##### React vs Angular2 #####-->
-			<section>
-				<h1>React vs Angular2</h1>
-				<img>
+			<!--##### Casos de ejemplo #####-->
+			<section id="ejemplos">
+				<section>
+					<h1>React en la actualidad</h1>
+					<p>Sitios que han confiado en React para sus desarrollos</p>
+				</section>
+				<section>
+					<h4>Casos de ejemplo 1</h4>
+					<div class="row"><div><img><p>Netflix</p></div>
+					</div>
+				</section>
+				<section>
+					<div class="row">
+						<h4>Casos de ejemplo 2</h4>
+						<div><img><p>Netflix</p></div>
+					</div>
+				</section>
 			</section>
-			<section>
+			<!--##### /Casos de jemplo #####-->
+
+			<!--##### React vs Angular2 #####-->
+			<section id="react-vs-angular">
+				<section data-background-image="https://cdn-images-1.medium.com/max/800/1*MRPl_SNuRGJchb6eOAnkSA.jpeg">
+					<h1>React vs Angular2</h1>
+					<h2>Proximamente...</h2>
+				</section>
 				<section>
 					<h1>El acceso al DOM</h1>
 					<p>El proceso mas costoso del navegador</p>
 				</section>
 				<section>
-
-				</section>
-			</section>
-			<section>
-				<section>
 					<h1>HTML Templates</h1>
 					<p>Las limitaciones del HTML y las templates</p>
 				</section>
-				<section>
-
-				</section>
-			</section>
-			<section>
 				<section>
 					<h1>Libreria vs framework</h1>
 					<p>La lucha de los 2 hermanos, distintos pero iguales</p>
@@ -404,35 +481,11 @@
 			<!--##### /React vs Angular2 #####-->
 
 			<!--##### Tutorial #####-->
-			<section>
-				<h1>Tutorial</h1>
+			<section id="tutorial" data-background-video="https://www.youtube.com/watch?v=bo5MM2N_3tw">
+				<h1>Tutorial Hola Mundo!</h1>
+				<h2>Proximamente...</h2>
 			</section>
 			<!--##### /Tutorial #####-->
-
-			<!-- Casos de ejemplo -->
-			<section>
-				<section>
-					<h1>React en la actualidad</h1>
-					<p>Sitios que hanconfiado en React apra sus desarrollos</p>
-				</section>
-				<section>
-					<h4>Casos de ejemplo 1</h4>
-					<div class="stios-react-1">
-						<div>
-							<img>
-							<p>Netflix</p>
-						</div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</section>
-				<section>
-
-				</section>
-			</section>
-			<!-- /Casos de jemplo -->
 		</div>
 	</div>
 
@@ -441,3 +494,4 @@
 	<script src="%PUBLIC_URL%/js/front.js"></script>
   </body>
 </html>
+

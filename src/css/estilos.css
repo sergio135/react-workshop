@@ -120,6 +120,19 @@
 }
 
 
+/* JSX */
+#JSX .img-flotante img {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#JSX .organizacion .row div {
+    flex-grow: 1;
+}
+
 /* Ecosistema React */
 #ecosistema-react .logos {
     display: flex;
