@@ -159,3 +159,19 @@
 }
 
 
+
+#ejemplos p {
+    margin: 0;
+}
+#ejemplos .row {
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+#ejemplos .row div {
+    flex-basis: 19%;
+}
+
+#ejemplos img {
+    width: 100%;
+}
+

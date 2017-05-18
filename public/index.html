@@ -17,7 +17,7 @@
 	<div id="root"></div>
 	<div class="reveal">
 		<div class="slides">
-			<section id="welcome" data-background-image="http://blog.workshape.io/content/images/2015/10/cover.png">
+			<section id="welcome" data-background-image="%PUBLIC_URL%/img/cover.png">
 				<h1>Bienvenidos al React WorkShop</h1>
 				<h2>Utiliza el poder de Facebook en tus desarrollos</h2>
 				<h3 class="fragment grow">React - Router - Redux</h3>
@@ -109,7 +109,7 @@
 			<!--##### /Introduccion #####-->
 
 			<!--##### Funcional #####-->
-			<section data-background-image="http://wallpapercave.com/wp/JoqzOng.jpg">
+			<section data-background-image="%PUBLIC_URL%/img/features-react.png">
 				<h1>Caracteristicas de React</h1>
 			</section>
 			
@@ -209,9 +209,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="webpack" data-background-image="https://media.giphy.com/media/zIwIWQx12YNEI/giphy.gif">
-					
-				</section>
+				<section data-background-image="%PUBLIC_URL%/img/virtual-dom/giphy.gif"></section>
 				<section>
 					<h1>Ventajas</h1>
 					<p class="fragment fade-up">Solo actualizamos los datos que han cambiado</p>
@@ -251,7 +249,7 @@
 						</div>
 						<div class="fragment fade-up">
 							<p>Y arma tu propio Lego</p>
-							<img src="https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/videos/city/thumbnails/ap_minimovie_thumbnail.jpg?l.r2=524841091">
+							<img src="%PUBLIC_URL%/img/componentes/lego.jpg">
 						</div>
 					</div>
 				</section>
@@ -407,16 +405,17 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 			</section>
 			<section id="Router">
 				<section>
+					<img src="%PUBLIC_URL%/img/ecosistema-react/react-router.png">
 					<h1>React Router</h1>
 					<p>El routing escrito en JSX</p>
 				</section>
 				<section>
 					<h1>¿Como funciona?</h1>
-					<p>Se encarga de simular la navegacion web</p>
-					<p>Esta desarrollada para React pero es externa</p>
-					<p>Permite navegacion web y movil nativo</p>
-					<p>Esta escrito en leguaje JSX</p>
-					<pre><code>&ltRouter>
+					<p class="fragment fade-up">Se encarga de simular la navegacion web</p>
+					<p class="fragment fade-up">Esta desarrollada para React pero es externa</p>
+					<p class="fragment fade-up">Permite navegacion web y móvil nativo</p>
+					<p class="fragment fade-up">Esta escrito en JSX o en componentes</p>
+					<pre class="fragment fade-up"><code>&ltRouter>
     &ltRoute path="/" component={Home}/>
     &ltRoute path="/about" component={About}/>
     &ltRoute path="/topics" component={Topics}>
@@ -427,6 +426,7 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 			</section>
 			<section id="flux">
 				<section>
+					<img src="%PUBLIC_URL%/img/ecosistema-react/react-flux.png">
 					<h1>Metodologia Flux</h1>
 					<p>La verdadera M del MVC</p>
 				</section>
@@ -439,31 +439,61 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 			</section>
 			<section id="webpack">
 				<section>
+					<img src="%PUBLIC_URL%/img/ecosistema-react/webpack.png">
 					<h1>Webpack</h1>
 					<p>El bundle mas potente de la actualidad</p>
 				</section>
 				<section>
 					<h1>¿Que es Webpack?</h1>
+					<p class="fragment fade-up">Es un module bundle (Paquete de modulos) para el Front</p>
+					<p class="fragment fade-up">Es una herramienta de desarrollo</p>
+					<p class="fragment fade-up">Su funcion principal es encapsular y servir el JS como modulos nativos</p>
+					<p class="fragment fade-up">Pero tambien es capaz de encapsular otros archivos</p>
+					<p class="fragment fade-up">Dispone de un sistema de plugins para conectar otras herramientas</p>
+					<p class="fragment fade-up">Muy personalizable</p>
+				</section>
+				<section>
+					<h1>¿Como funciona?</h1>
+					<img src="%PUBLIC_URL%/img/webpack/webpack-func.png">
+					<p>Se conectan los diferentes archivos a un punto de entrada</p>
+					<p>Los plugins, tratan los archivos, y por ultimo son encapsulados</p>
 				</section>
 			</section>
 			<section id="babel">
 				<section>
+					<img src="%PUBLIC_URL%/img/ecosistema-react/babel.png">
 					<h1>Babel</h1>
 					<p>Usa hoy el javascript del mañana</p>
 				</section>
 				<section>
 					<h1>¿Que es Babel?</h1>
-					<p></p>
+					<p class="fragment fade-up">Es un transpilador de javascript</p>
+					<p class="fragment fade-up">Que convierte una version de JS en otra</p>
+					<p class="fragment fade-up">No solo compila JS, si no que tambien lo hace con el JSX</p>
+					<p class="fragment fade-up">Se integra bien con Webpack, aunque puede funcionar en solitario</p>
+					<p class="fragment fade-up">Tambien puede añadir Polyfills de compatibilidad</p>
 				</section>
 			</section>
 			<section id="Jest">
 				<section>
+					<img src="%PUBLIC_URL%/img/ecosistema-react/jest.png">
 					<h1>Jest</h1>
 					<p>Los UnitTest de los inmutables</p>
 				</section>
 				<section>
 					<h1>¿Que es Jest?</h1>
-					<p></p>
+					<p class="fragment fade-up">Es una libreria de test unitarios basado en Jasmine</p>
+					<p class="fragment fade-up">Usado por Facebook para testear todo su codigo, includo React</p>
+					<p class="fragment fade-up">Renderiza componentes de forma aislada y compartida</p>
+					<p class="fragment fade-up">Incorpora la filosofia "zero-configuration</p>
+					<p class="fragment fade-up">Lanza test en paralelo y en sandbox</p>
+					<p class="fragment fade-up">Dispone de una libreria de Mock integrada para modulos</p>
+					<p class="fragment fade-up">Viene incluido en el React-cli</p>
+					<p class="fragment fade-up">Trabaja tambien con Typescript</p>
+				</section>
+				<section>
+					<h3>Consola de Jest</h3>
+					<img src="%PUBLIC_URL%/img/jest/15-watch.gif">
 				</section>
 			</section>
 			<!--##### React Extras #####-->
@@ -475,8 +505,33 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 					<p>Sitios que han confiado en React para sus desarrollos</p>
 				</section>
 				<section>
-					<h4>Casos de ejemplo 1</h4>
-					<div class="row"><div><img><p>Netflix</p></div>
+					<h4>Casos de ejemplo</h4>
+					<div class="row">
+						<div><img src="%PUBLIC_URL%/img/sites/netflix.png"><p>Netflix</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/airbnb.svg"><p>Netflix</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/paypal.png"><p>Paypal</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/atlassian.jpg"><p>atlassian</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/stackoverflow.png"><p>Stackoverflow</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/codecademy.png"><p>Codecademy</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/clash-of-clans.png"><p>ClashofClans</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/docker.png"><p>Docker</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/fiverr.png"><p>Fiverr</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/expedia.jpg"><p>Expedia</p></div>
+					</div>
+				</section>
+				<section>
+					<h4>Casos de ejemplo</h4>
+					<div class="row">
+						<div><img src="%PUBLIC_URL%/img/sites/dropbox.png"><p>Dropbox</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/flipboard.png"><p>Flipboard</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/postman.png"><p>PostMan</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/wix.svg"><p>Wix</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/bbc.jpg"><p>BBC</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/fotocasa.jpg"><p>FotoCasa</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/twitter.jpg"><p>Twitter</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/tesla.jpg"><p>Tesla</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/Pinterest.png"><p>Pinterest</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/Periscope.jpg"><p>Periscope</p></div>
 					</div>
 				</section>
 				<section>
@@ -490,7 +545,7 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 
 			<!--##### React vs Angular2 #####-->
 			<section id="react-vs-angular">
-				<section data-background-image="https://cdn-images-1.medium.com/max/800/1*MRPl_SNuRGJchb6eOAnkSA.jpeg">
+				<section data-background-image="%PUBLIC_URL%/img/angular-vs-react.jpg">
 					<h1>React vs Angular2</h1>
 					<h2>Proximamente...</h2>
 				</section>
@@ -510,7 +565,7 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 			<!--##### /React vs Angular2 #####-->
 
 			<!--##### Tutorial #####-->
-			<section id="tutorial" data-background-video="https://www.youtube.com/watch?v=bo5MM2N_3tw">
+			<section id="tutorial" data-background-video="%PUBLIC_URL%/img/react-tutorial.mp4" data-background-video-muted="true">
 				<h1>Tutorial Hola Mundo!</h1>
 				<h2>Proximamente...</h2>
 			</section>
