@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Template from './template';
 
 class App extends Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class App extends Component {
   }
 
   render() {
+    return <Template changeEvent={this.changeEvent} clase={this.state.clase} text={this.state.text}/>;
+    /*
     return (
       <div className="App">
         <input type="text" onChange={this.changeEvent}/>
@@ -29,6 +32,7 @@ class App extends Component {
         </p>
       </div>
     );
+    */
   }
 }
 
