@@ -151,11 +151,27 @@
 }
 
 
-/* Ecosistema React */
+/* Virtual Dom */
 #virtual-dom .row .float {
     position: absolute;
     left: 0;
     width: 90%;
+}
+
+/* Flux */
+#flux #img-flux {
+    margin: 0; 
+    height: 200px; 
+}
+#flux p {
+    margin: 10px 0;
+}
+
+#tutorial h2 {
+    color: #2e2e2e;
+}
+#react-native h1{
+    margin-top: 80px;
 }
 
 

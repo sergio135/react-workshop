@@ -7,7 +7,7 @@ import './css/beige.css';
 import './css/atom-one-dark.css';
 import './css/estilos.css';
 
-import EjemploInputBinding from './apps/EjemploInputBinding';
+import EjemploInputBinding from './apps/ejemploInputBinding';
 //import App from './apps/App';
 
 /* jshint ignore:start */
