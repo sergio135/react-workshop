@@ -8,5 +8,5 @@ const Template = ({changeEvent, clase, text}) => (
         </p>
     </div>
 
-)
+);
 export default Template;

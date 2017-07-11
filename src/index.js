@@ -8,18 +8,13 @@ import './css/atom-one-dark.css';
 import './css/estilos.css';
 
 import EjemploInputBinding from './apps/EjemploInputBinding';
-//import App from './apps/App';
 
-/* jshint ignore:start */
 ReactDOM.render(
   <EjemploInputBinding/>,
   document.getElementById('ejemplo-input-binding')
 );
-/* jshint ignore:end */
 
-/* jshint ignore:start */
 ReactDOM.render(
   <div/>,
   document.getElementById('root')
 );
-/* jshint ignore:end */
