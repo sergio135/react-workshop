@@ -281,36 +281,6 @@
 				
 			</section>
 
-			<section id="Isomorfico">
-				<section>
-					<h1>Isomorfico</h1>
-					<p>Ejecuta en el cliente y servidor al mismo tiempo</p>
-				</section>
-				<section>
-					<h1>El problema...</h1>
-					<p class="fragment fade-up">Carga inicial lenta</p>
-					<p class="fragment fade-up">Pesima optimizacion SEO</p>
-					<p class="fragment fade-up">No rastrable por crawlers</p>
-				</section>
-				<section>
-					<h1>¿Como funciona?</h1>
-					<p class="fragment fade-up">La logica JS se encuentra en el servidor</p>
-					<p class="fragment fade-up">En la primera llamada, el servidor devuelve la ruta solicitada con el JS embebido</p>
-					<p class="fragment fade-up">Las futuras cargas se producen por AJAX para traer la logica en asincronico</p>
-					<p class="fragment fade-up">Si volvemos a refrescar el navegador, el servidor vuelve a enviar la ruta con el JS embebido</p>
-					<h5 class="fragment fade-up">Requerimientos:</h5>
-					<p class="fragment fade-up">El servidor debe interpretar JS, por lo que node.js es requerido</p>
-				</section>
-				<section>
-					<h1>Server render / UX Client</h1>
-					<h5>Ventajas:</h5>
-					<p class="fragment fade-up">Una primera carga muy rapida</p>
-					<p class="fragment fade-up">Optimizacion SEO y Crawler friendly</p>
-					<p class="fragment fade-up">Se mantiene la usabilidad del frontend</p>
-					<p class="fragment fade-up">El resto de datos se carga de forma asincronica</p>
-				</section>
-			</section>
-
 			<section id="JSX">
 				<section>
 					<h1>JSX</h1>
@@ -388,6 +358,36 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 					<p class="fragment fade-up">En el caso de los warning solo muestra el error</p>
 				</section>
 			</section>
+
+			<section id="Isomorfico">
+				<section>
+					<h1>Isomorfico</h1>
+					<p>Ejecuta en el cliente y servidor al mismo tiempo</p>
+				</section>
+				<section>
+					<h1>El problema...</h1>
+					<p class="fragment fade-up">Carga inicial lenta</p>
+					<p class="fragment fade-up">Pesima optimizacion SEO</p>
+					<p class="fragment fade-up">No rastrable por crawlers</p>
+				</section>
+				<section>
+					<h1>¿Como funciona?</h1>
+					<p class="fragment fade-up">La logica JS se encuentra en el servidor</p>
+					<p class="fragment fade-up">En la primera llamada, el servidor devuelve la ruta solicitada con el JS embebido</p>
+					<p class="fragment fade-up">Las futuras cargas se producen por AJAX para traer la logica en asincronico</p>
+					<p class="fragment fade-up">Si volvemos a refrescar el navegador, el servidor vuelve a enviar la ruta con el JS embebido</p>
+					<h5 class="fragment fade-up">Requerimientos:</h5>
+					<p class="fragment fade-up">El servidor debe interpretar JS, por lo que node.js es requerido</p>
+				</section>
+				<section>
+					<h1>Server render / UX Client</h1>
+					<h5>Ventajas:</h5>
+					<p class="fragment fade-up">Una primera carga muy rapida</p>
+					<p class="fragment fade-up">Optimizacion SEO y Crawler friendly</p>
+					<p class="fragment fade-up">Se mantiene la usabilidad del frontend</p>
+					<p class="fragment fade-up">El resto de datos se carga de forma asincronica</p>
+				</section>
+			</section>
 			<!--##### /Funcional #####-->
 
 			<!--##### React Extras #####-->
@@ -411,10 +411,11 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 				</section>
 				<section>
 					<h1>¿Como funciona?</h1>
-					<p class="fragment fade-up">Se encarga de simular la navegacion web</p>
+					<p class="fragment fade-up">Se encarga de simular la navegacion web y movil</p>
 					<p class="fragment fade-up">Esta desarrollada para React pero es externa</p>
-					<p class="fragment fade-up">Permite navegacion web y móvil nativo</p>
-					<p class="fragment fade-up">Esta escrito en JSX o en componentes</p>
+					<p class="fragment fade-up">Permite rutas y sub-rutas</p>
+					<p class="fragment fade-up">Rutas variables, y layouts</p>
+					<p class="fragment fade-up">Esta escrito en 'JSX' o componentes</p>
 					<pre class="fragment fade-up"><code>&ltRouter>
     &ltRoute path="/" component={Home}/>
     &ltRoute path="/about" component={About}/>
@@ -432,19 +433,44 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 				</section>
 				<section>
 					<h1>¿Que es Flux?</h1>
-					<p>Es un patron/arquitectura de modelos de datos</p>
-					<p>Parte de la idea de definir un modelo real y externo</p>
-					<p></p>
+					<p class="fragment fade-up">Es un patron/arquitectura de modelos de datos</p>
+					<p class="fragment fade-up">Los modelos son independientes y externos a la aplicación</p>
+					<p class="fragment fade-up">Los datos son inmutables, extraibles, y replegables</p>
+					<p class="fragment fade-up">No tienen dependencia del famework</p>
+					<p class="fragment fade-up">No son modelos simulados, es la verdadera M del MCV</p>
 				</section>
 				<section>
-					<img src="%PUBLIC_URL%/img/ecosistema-react/redux.png">
+					<h2>Flux en detalle..</h2>
+					<img src="%PUBLIC_URL%/img/flux/flux.png">
+					<p class="fragment fade-up">Se basa en la creacion de varios contenedores donde guardar los datos</p>
+					<p class="fragment fade-up">Los contenedores sirven todos los datos dinamicos a la/s aplicacion/es</p>
+					<p class="fragment fade-up">Para modificar los datos, solo se puede acceder atraves de acciones</p>
+					<p class="fragment fade-up">Dichas acciones son manejdas por el dispatcher</p>
+					<p class="fragment fade-up">Los Stores son copiados en cada modificacion, siendo inmutables</p>
+					<p class="fragment fade-up">Faciles de testear, ejecutar, y traspasar de framework o proyecto</p>	
+				</section>
+				<section>
+					<img id="img-flux" src="%PUBLIC_URL%/img/ecosistema-react/redux.png">
 					<h1>Redux</h1>
 					<p>The Flux Library</p>
 				</section>
 				<section>
 					<h1>¿Que es Redux?</h1>
-					<p>Es una libreria JS que implementa Flux</p>
-					<p>Implementa 1 solo y todopoderoso Store</p>
+					<p class="fragment fade-up">Es una libreria JS que implementa Flux</p>
+					<p class="fragment fade-up">Extremadamente lijera, 2kB y no tiene dependencias</p>
+					<p class="fragment fade-up">Puede implementarse en cualquier framework</p>
+					<p class="fragment fade-up">Nos aporta una serie de metodos para agilizar Flux</p>
+					<h5 class="fragment fade-up">Diferencias:</h5>
+					<p class="fragment fade-up">Implementa 1 solo Store, y no soporta Dispatcher</p>
+					<p class="fragment fade-up">Admite varios reducers que se combinan</p>
+					<p class="fragment fade-up">Su escalabilidad y testing son increibles</p>
+				</section>
+				<section>
+					<h1>Diagrama Redux</h1>
+					<img src="%PUBLIC_URL%/img/flux/redux.svg">
+				</section>
+				<section data-background-image="%PUBLIC_URL%/img/flux/amazing.gif">
+					<h1 class="fragment fade-up">Programador despues de usar Redux</h1>
 				</section>
 			</section>
 			<section id="webpack">
@@ -518,7 +544,7 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 					<h4>Casos de ejemplo 1</h4>
 					<div class="row">
 						<div><img src="%PUBLIC_URL%/img/sites/netflix.png"><p>Netflix</p></div>
-						<div><img src="%PUBLIC_URL%/img/sites/airbnb.svg"><p>Netflix</p></div>
+						<div><img src="%PUBLIC_URL%/img/sites/airbnb.svg"><p>Airbnb</p></div>
 						<div><img src="%PUBLIC_URL%/img/sites/paypal.png"><p>Paypal</p></div>
 						<div><img src="%PUBLIC_URL%/img/sites/atlassian.jpg"><p>atlassian</p></div>
 						<div><img src="%PUBLIC_URL%/img/sites/stackoverflow.png"><p>Stackoverflow</p></div>
@@ -567,13 +593,19 @@ return &ltp&gt {contenido} i.valor &lt/p&gt ;
 				</section>
 			</section>
 			<!--##### /React vs Angular2 #####-->
-
+			
 			<!--##### Tutorial #####-->
 			<section id="tutorial" data-background-video="%PUBLIC_URL%/img/react-tutorial.mp4" data-background-video-muted="true">
 				<h1>Tutorial Hola Mundo!</h1>
 				<h2>Proximamente...</h2>
 			</section>
 			<!--##### /Tutorial #####-->
+
+			<!--##### Tutorial #####-->
+			<section id="react-native" data-background-image="%PUBLIC_URL%/img/react-native.png">
+				<h2>Proximamente...</h2>
+			</section>
+			<!--##### / #####-->
 		</div>
 	</div>
 
