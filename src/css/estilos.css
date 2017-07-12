@@ -119,6 +119,12 @@
     width: 100%;
 }
 
+/* Ciclo de vida */
+#ciclo-vida h5 {
+    margin: 20px 10px 20px 0px;
+    padding-right: 10px;
+    border-right: 2px solid #ffffff;
+} 
 
 /* JSX */
 #JSX .img-flotante img {
